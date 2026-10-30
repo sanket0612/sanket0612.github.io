@@ -1,18 +1,148 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f9fc">
+  <meta name="description" content="Sanket Barapatre is a senior software engineer in Amsterdam working on backend platforms, distributed testing, reliability, and release engineering.">
+  <title>Sanket Barapatre — Senior Software Engineer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="Sanket Barapatre, back to top">SB<span>.</span></a>
+      <div class="nav-links"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+    </nav>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+    <header class="hero" id="top">
+      <div class="hero-name">
+        <div class="identity-line"><span class="monogram" aria-hidden="true">SB</span><span>Senior Software Engineer<br>Amsterdam, Netherlands</span></div>
+        <h1>Sanket<br>Barapatre<span class="period">.</span></h1>
       </div>
+      <div class="hero-intro">
+        <p class="lead" data-view-content="platform">I build tools that make complex changes easier to test and release.</p>
+        <p data-view-content="platform">My work spans ephemeral environments, shared backend libraries, observability, and controlled rollouts, with an emphasis on developer experience.</p>
+        <p class="lead" data-view-content="backend" hidden>I build backend services for distributed product workflows.</p>
+        <p data-view-content="backend" hidden>I have worked on Java and Spring services, event-driven payments, asynchronous messaging, APIs, and full-stack insurance software.</p>
+        <div class="hero-links" aria-label="Contact links"><a href="mailto:sanket.barapatre.06@gmail.com">Email <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/sanketbarapatre06" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </header>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+    <main id="main">
+      <section class="section work-section" id="work" aria-labelledby="work-heading">
+        <div class="section-heading"><div><h2 id="work-heading">Impact by role</h2></div></div>
+        <div class="role-switcher" role="tablist" aria-label="Explore work by role">
+          <button class="view-tab" type="button" role="tab" id="platform-tab" aria-controls="platform-panel" aria-selected="true" tabindex="0" data-view="platform">Developer experience / platform</button>
+          <button class="view-tab" type="button" role="tab" id="backend-tab" aria-controls="backend-panel" aria-selected="false" tabindex="-1" data-view="backend">Backend engineering</button>
+        </div>
+
+        <div class="perspective-panel" id="platform-panel" role="tabpanel" aria-labelledby="platform-tab" data-view-content="platform">
+          <div class="perspective-head"><h3>Developer experience and platform engineering</h3><p>Shared capabilities that help engineers get feedback, understand service behavior, and release changes with control.</p></div>
+          <div class="work-grid">
+            <article class="work-card work-card-featured">
+              <div class="work-visual visual-blue"><img src="assets/distributed-testing.svg" alt="Sandbox context flowing through a Kafka producer, transactional outbox, and consumer toward an isolated test environment" width="700" height="440"></div>
+              <div class="work-copy"><p class="work-category">Developer inner loop</p><h3>Ephemeral testing for asynchronous microservice workflows</h3><p>At Miro, I collaborated on composable, ephemeral test environments for microservices, using <a href="https://www.signadot.com/" target="_blank" rel="noopener noreferrer">Signadot</a> for the inner feedback loop.</p><p>I owned the asynchronous integration across microservices: sandbox context propagation through Kafka-based Pub/Sub producers, transactional outbox writes, and consumers. I also implemented Temporal task queue routing support so workflow orchestration could be tested inside an ephemeral environment.</p><p>I also delivered a lighter local monolith startup path connected to remote services in ephemeral environments, making local development faster and more predictable.</p><p class="technology">Signadot · Java · Spring Boot · Kafka · Temporal</p></div>
+            </article>
+            <article class="work-card">
+              <div class="work-visual visual-mint"><img src="assets/health-checks.svg" alt="Grouped service health signals with ownership, readiness, and operational metrics" width="700" height="440" loading="lazy"></div>
+              <div class="work-copy"><p class="work-category">Shared reliability tooling</p><h3>Giving services a clear health signal</h3><p>I designed and implemented reusable Spring Boot health checks with grouped indicators, component ownership, asynchronous caching, readiness and liveness behavior, metrics, and dashboards. The shared framework grew to 50+ checks used across 40+ teams.</p><p class="technology">Java · Spring Boot Actuator · Prometheus · Grafana</p></div>
+            </article>
+            <article class="work-card">
+              <div class="work-visual visual-sand"><img src="assets/release-paths.svg" alt="A release moving through build, checkpoint, Auto Scaling Group rollout, and observation stages" width="700" height="440" loading="lazy"></div>
+              <div class="work-copy"><p class="work-category">Release engineering</p><h3>Making monolith releases more predictable</h3><p>I collaborated on moving core monolith deployments to AWS Auto Scaling Groups, using rollout checkpoints to stage instance refreshes and help stabilize releases.</p><p>I built reusable GitHub Actions in TypeScript to simplify deployment pipelines and make them more stable.</p><p>I created a Backstage deployment dashboard that enabled 250+ engineers to track monolith deployments. It became one of the most visited pages in Miro’s internal developer portal.</p><p class="technology">AWS · Auto Scaling Groups · GitHub Actions · TypeScript · Backstage</p></div>
+            </article>
+            <article class="work-card work-card-featured">
+              <div class="work-visual visual-lilac"><img src="assets/kubernetes-migration.svg" alt="A conceptual transition from Auto Scaling Groups toward Kubernetes, service mesh routing, and ephemeral development" width="700" height="440" loading="lazy"></div>
+              <div class="work-copy"><p class="work-category">Infrastructure transition</p><h3>Preparing the monolith for Kubernetes</h3><p>I collaborated on moving the monolith deployment path from Auto Scaling Groups toward Kubernetes and onboarding it to the service mesh. This networking work supported ephemeral development alongside the shared backend.</p><p>I helped launch and shape Miro’s development environment, whose wider rollout onboarded 200+ services. I also collaborated on multiple staging environments, working directly with Terraform and Helm manifests.</p><p class="technology">Kubernetes · Service mesh · Terraform · Helm</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="perspective-panel" id="backend-panel" role="tabpanel" aria-labelledby="backend-tab" data-view-content="backend" hidden>
+          <div class="perspective-head"><h3>Backend engineering</h3><p>Java services, messaging, APIs, and product features built across distributed systems.</p></div>
+          <div class="work-grid">
+            <article class="work-card work-card-featured">
+              <div class="work-visual visual-blue"><img src="assets/event-driven-payments.svg" alt="An event-driven payment flow connecting an API, message queue, payment service, and reconciliation" width="700" height="440" loading="lazy"></div>
+              <div class="work-copy"><p class="work-category">Event-driven microservices</p><h3>Distributed services and asynchronous queues</h3><p>At Thoughtworks, I worked on the payment side of an e-commerce system, building Java and Spring Boot microservices and asynchronous flows using AWS SQS and SNS, later shifting to RabbitMQ. I collaborated with teams working on orders, inventory, and customer support.</p><p class="technology">Java · Spring Boot · AWS SQS/SNS · RabbitMQ · PostgreSQL</p></div>
+            </article>
+            <article class="work-card">
+              <div class="work-visual visual-mint"><img src="assets/distributed-testing.svg" alt="Context carried through Kafka publishing, an outbox, and a consumer" width="700" height="440" loading="lazy"></div>
+              <div class="work-copy"><p class="work-category">Microservice architecture</p><h3>Standardizing context propagation</h3><p>At Miro, I worked on standardizing context propagation across microservices. I implemented shared OpenTelemetry and Java components for gRPC and Kafka/outbox flows, supporting ephemeral testing environments and sandbox-aware processing.</p><p class="technology">Java · gRPC · Kafka · OpenTelemetry · Transactional outbox</p></div>
+            </article>
+            <article class="work-card">
+              <div class="work-visual visual-sand"><img src="assets/insurance-product.svg" alt="An internal insurance application connecting an interface, API, and data layer" width="700" height="440" loading="lazy"></div>
+              <div class="work-copy"><p class="work-category">Full-stack product development</p><h3>Building an internal insurance product</h3><p>At Intellect Design Arena, I owned end-to-end full-stack development of an internal insurance product, from its Ext JS interface and client-specific branding to Java services and REST APIs.</p><p class="technology">Ext JS · Java · Spring Boot · REST APIs · MongoDB</p></div>
+            </article>
+          </div>
+          <p class="work-aside"><strong>Working with product teams.</strong> At Thoughtworks, I paired with client engineers and worked with business analysts and adjacent teams on payment requirements and delivery.</p>
+        </div>
+      </section>
+
+      <section class="section experience-section" id="experience" aria-labelledby="experience-heading">
+        <div class="section-heading"><div><p class="section-kicker">Background</p><h2 id="experience-heading">Experience</h2></div><p>From product engineering to the backend foundations that help teams ship and support their work.</p></div>
+        <div class="experience-list">
+          <article class="experience-row"><div><h3>Miro</h3><p>Current role: Senior Software Engineer · Developer Experience and Platform Engineering</p></div><span>Jan 2023 – Present</span></article>
+          <article class="experience-row"><div><h3>Thoughtworks</h3><p>Software Consultant · Event-driven payments and client delivery</p></div><span>Jan 2020 – Dec 2022</span></article>
+          <article class="experience-row"><div><h3>Oracle</h3><p>Software Engineer · Authentication systems</p></div><span>Jul 2019 – Dec 2019</span></article>
+          <article class="experience-row"><div><h3>Intellect Design Arena</h3><p>Product Developer · Insurance applications and APIs</p></div><span>Jul 2016 – Jul 2019</span></article>
+        </div>
+        <div class="background-detail">
+          <div><p class="section-kicker">Working knowledge</p><p data-view-content="platform">Java, Spring Boot, Kafka, Temporal, OpenTelemetry, Signadot, Kubernetes, Terraform, GitHub Actions, and Backstage.</p><p data-view-content="backend" hidden>Java, Spring Boot, REST, gRPC, PostgreSQL, MongoDB, Kafka, RabbitMQ, OpenTelemetry, and Ext JS.</p></div>
+          <div><p class="section-kicker">Education</p><p>Bachelor of Technology, Electronics and Telecommunication<br>National Institute of Technology Raipur · 2016</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="footer-main"><div><p class="section-kicker">Contact</p><h2>Let's talk about<br>building better systems.</h2></div><a class="contact-link" href="mailto:sanket.barapatre.06@gmail.com">Email me <span aria-hidden="true">↗</span></a></div>
+      <div class="footer-bottom"><span>© Sanket Barapatre</span><div><a href="mailto:sanket.barapatre.06@gmail.com">Email</a><a href="https://www.linkedin.com/in/sanketbarapatre06" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div>
+    </footer>
+  </div>
+  <script>
+  (() => {
+    const tabList = document.querySelector('.role-switcher');
+    if (!tabList) return;
+    const tabs = Array.from(tabList.querySelectorAll('[role="tab"]'));
+    const content = Array.from(document.querySelectorAll('[data-view-content]'));
+
+    function selectView(view, updateUrl = true) {
+      for (const tab of tabs) {
+        const active = tab.dataset.view === view;
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
+      }
+      for (const element of content) element.hidden = element.dataset.viewContent !== view;
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        if (view === 'backend') url.searchParams.set('view', 'backend');
+        else url.searchParams.delete('view');
+        try { window.history.replaceState(null, '', url); }
+        catch { /* Embedded previews may have an opaque origin. */ }
+      }
+    }
+
+    for (const tab of tabs) tab.addEventListener('click', () => selectView(tab.dataset.view));
+    tabList.addEventListener('keydown', (event) => {
+      const current = tabs.indexOf(document.activeElement);
+      if (current < 0) return;
+      let next = current;
+      if (event.key === 'ArrowRight') next = (current + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') next = (current - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      selectView(tabs[next].dataset.view);
+      tabs[next].focus();
+    });
+
+    const initial = new URLSearchParams(window.location.search).get('view') === 'backend' ? 'backend' : 'platform';
+    selectView(initial, false);
+    document.documentElement.classList.add('has-js');
+  })();
+  </script>
+</body>
+</html>
