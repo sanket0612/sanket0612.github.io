@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" role="img" aria-label="Illustration of Amsterdam canal houses and a bridge">
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#b8d1e6"/>
+      <stop offset="1" stop-color="#d9e9f5"/>
+    </linearGradient>
+  </defs>
+  <circle cx="1036" cy="91" r="59" fill="#d4e5f2"/>
+  <g fill="none" stroke="#9ab8ce" stroke-width="3" stroke-linecap="round" opacity=".8">
+    <path d="M666 103h71m-46 18h74M840 68h85m-42 17h74"/>
+    <path d="M1092 157h61m-36 16h77"/>
+  </g>
+  <g fill="#c2d7e7" stroke="#8dabc2" stroke-width="3" stroke-linejoin="round">
+    <path d="M522 351V226h13v-17h13v-18h19v-21h22v21h19v18h13v17h13v125Z"/>
+    <path d="M636 351V213h14v-17l29-25 29 25v17h14v138Z"/>
+    <path d="M724 351V235h14v-18h14v-17h15v-17h19v17h15v17h14v18h13v116Z"/>
+    <path d="M831 351V197h13l24-25 24 25h13v154Z"/>
+    <path d="M907 351V233h13v-18h15v-18h16v-19h23v19h16v18h15v18h12v118Z"/>
+    <path d="M1019 351V226h12v-21h14l24-27 25 27h14v21h12v125Z"/>
+    <path d="M1123 351V251h13v-15h13v-16h16v-19h14v150Z"/>
+  </g>
+  <g fill="none" stroke="#789db9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".83">
+    <path d="M551 246v24m24-24v24m24-24v24m-48 20v24m24-24v24m24-24v24"/>
+    <path d="M661 232v24m36-24v24m-36 24v24m36-24v24m-36 23v24m36-24v24"/>
+    <path d="M751 250v25m25-25v25m25-25v25m-50 18v25m25-25v25m25-25v25"/>
+    <path d="M850 216v26m34-26v26m-34 18v26m34-26v26m-34 18v26m34-26v26"/>
+    <path d="M936 248v24m27-24v24m27-24v24m-54 19v24m27-24v24m27-24v24"/>
+    <path d="M1044 246v25m29-25v25m29-25v25m-58 19v25m29-25v25m29-25v25"/>
+    <path d="M1145 264v24m22-24v24m-22 16v24m22-24v24"/>
+  </g>
+  <g stroke="#7c9fb8" stroke-width="3" fill="none" opacity=".7">
+    <path d="M515 351h685M600 351v-36q0-14 15-14t15 14v36m266 0v-36q0-14 15-14t15 14v36"/>
+    <path d="M1072 351v-27q0-13 14-13t14 13v27"/>
+  </g>
+  <path d="M0 369q156-11 298 3t300 0 300 1 302-6v93H0Z" fill="url(#water)" opacity=".77"/>
+  <g fill="none" stroke="#7ca3c0" stroke-linecap="round" opacity=".72">
+    <path stroke-width="5" d="M530 362q140-36 312-12t358-7"/>
+    <path stroke-width="3" d="M530 374q140-36 312-12t358-7"/>
+    <path stroke-width="3" d="M554 387v-19m57 7v-18m58 12v-17m57 11v-16m57 13v-17m57 17v-16m58 18v-17m58 17v-19m58 15v-17m58 9v-14m58 7v-14"/>
+    <path stroke-width="2" d="M611 415h66m76 12h94m56-13h52m74 20h85M550 442h106m116-3h69m84 8h119m67-36h68"/>
+  </g>
+</svg>
